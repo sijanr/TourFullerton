@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TourFullerton</string>
+    <string name="bar_title">bars</string>
+    <string name="bar_detail">Bars to checkout in Fullerton</string>
+</resources>
