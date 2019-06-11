@@ -17,6 +17,15 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
 
     private ArrayList<HomeList> homeList = new ArrayList<>();
     private Context mContext;
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setItemClickListener(OnItemClickListener listener){
+        this.listener = listener;
+    }
 
     /**
      * Constructor that initializes context and list data
@@ -86,6 +95,15 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
             title = itemView.findViewById(R.id.list_title);
             titleDetail = itemView.findViewById(R.id.title_detail);
             titleImage = itemView.findViewById(R.id.title_image_view);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int index = getAdapterPosition();
+                    if(index!= RecyclerView.NO_POSITION){
+                        listener.onItemClick(index);
+                    }
+                }
+            });
         }
     }
 }

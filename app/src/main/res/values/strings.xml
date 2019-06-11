@@ -2,4 +2,14 @@
     <string name="app_name">TourFullerton</string>
     <string name="bar_title">bars</string>
     <string name="bar_detail">Bars to checkout in Fullerton</string>
+    <string name="title_activity_bars">BarsActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="the_blue_door_bar">The Blue Door Bar</string>
+    <string name="blue_door_bar_phone">(714) 870-6191</string>
+    <string name="blue_door_bar_location">1310 S Euclid St, Fullerton, CA 92832</string>
+    <string name="tribune_bar">Tribune</string>
+    <string name="tribune_phone">(657) 217-4100</string>
+    <string name="tribune_location">101 E Commonwealth Ave, Fullerton, CA 92832</string>
 </resources>

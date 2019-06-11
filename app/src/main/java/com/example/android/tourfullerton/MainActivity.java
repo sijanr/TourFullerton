@@ -1,5 +1,6 @@
 package com.example.android.tourfullerton;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,5 +30,15 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(viewAdapter);
+
+        viewAdapter.setItemClickListener(new HomeListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                if(position==0){
+                    Intent intent = new Intent(MainActivity.this,BarsActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }
