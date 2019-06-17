@@ -19,11 +19,11 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
     private Context mContext;
     private OnItemClickListener listener;
 
-    public interface OnItemClickListener{
+    public interface OnItemClickListener {
         void onItemClick(int position);
     }
 
-    public void setItemClickListener(OnItemClickListener listener){
+    public void setItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
 
@@ -99,7 +99,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
                 @Override
                 public void onClick(View view) {
                     int index = getAdapterPosition();
-                    if(index!= RecyclerView.NO_POSITION){
+                    if (index != RecyclerView.NO_POSITION) {
                         listener.onItemClick(index);
                     }
                 }

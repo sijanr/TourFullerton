@@ -31,11 +31,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(viewAdapter);
 
+
+        //open up the activity related to the item clicked
         viewAdapter.setItemClickListener(new HomeListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                if(position==0){
-                    Intent intent = new Intent(MainActivity.this,BarsActivity.class);
+                if (position == 0) {
+                    Intent intent = new Intent(MainActivity.this, BarsActivity.class);
                     startActivity(intent);
                 }
             }
