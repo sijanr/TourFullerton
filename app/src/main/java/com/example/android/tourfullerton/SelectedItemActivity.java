@@ -19,9 +19,13 @@ public class BarsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_selected_list_main);
         getSupportActionBar().setTitle("Bars");
 
+        int position = getIntent().getIntExtra("POSITION",0);
+
         //add lists of places with their corresponding information to be displayed in the recycler view
-        selectedItemArrayList.add(new SelectedItem(R.drawable.the_blue_door_bar, "The Blue Door Bar", getResources().getString(R.string.blue_door_bar_phone), getString(R.string.blue_door_bar_location)));
-        selectedItemArrayList.add(new SelectedItem(R.drawable.tribune_bar, "Tribune Bar", getString(R.string.tribune_phone), getString(R.string.tribune_location)));
+        if(position==0){
+            selectedItemArrayList.add(new SelectedItem(R.drawable.the_blue_door_bar, "The Blue Door Bar", getResources().getString(R.string.blue_door_bar_phone), getString(R.string.blue_door_bar_location)));
+            selectedItemArrayList.add(new SelectedItem(R.drawable.tribune_bar, "Tribune Bar", getString(R.string.tribune_phone), getString(R.string.tribune_location)));
+        }
 
         //find the handle and set the adapter of the recycler view
         mRecyclerView = findViewById(R.id.selected_item_recycler_view);
