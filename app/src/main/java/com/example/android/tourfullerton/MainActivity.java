@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<HomeList> listArray = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +37,9 @@ public class MainActivity extends AppCompatActivity {
         viewAdapter.setItemClickListener(new HomeListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                if (position == 0) {
-                    Intent intent = new Intent(MainActivity.this, BarsActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(MainActivity.this, SelectedItemActivity.class);
+                intent.putExtra("POSITION", position);
+                startActivity(intent);
             }
         });
     }
