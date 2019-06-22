@@ -47,6 +47,15 @@ public class SelectedItemActivity extends AppCompatActivity {
                 selectedItemArrayList.add(new SelectedItem(R.drawable.j_korean_cuisine_restaurant, "J's Korean Cuisine", "(714) 519-3360", "114 W Commonwealth Ave, Fullerton, CA 92832 "));
                 break;
 
+            // if the user selects schools
+            case SCHOOLS:
+                getSupportActionBar().setTitle("Schools");
+                selectedItemArrayList.clear();
+                selectedItemArrayList.add(new SelectedItem(R.drawable.fullerton_high_school, "Fullerton Union High School", "(714) 626-3800", "201 E. Chapman Ave, Fullerton, CA 92832"));
+                selectedItemArrayList.add(new SelectedItem(R.drawable.fullerton_college, "Fullerton College", "(714) 992-7000", "321 E Chapman Avenue, Fullerton, CA 92832"));
+                selectedItemArrayList.add(new SelectedItem(R.drawable.california_state_fullerton, "California State University, Fullerton", "(657) 278-2011", "800 N. State College Blvd, Fullerton, CA 92831"));
+                break;
+
 
         }
 
