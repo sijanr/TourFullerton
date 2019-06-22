@@ -5,7 +5,7 @@ It is an android application that displays the places around a city, Fullerton, 
 Import the project in Android studio and compile and run it on your android device or emulator
 
 ### Prerequisites
-* Java SE Development Kit
+* Java Development Kit
 * Android Studio
 * Android device running on at least Android 4.0.3
 
@@ -14,6 +14,7 @@ Import the project in Android studio and compile and run it on your android devi
 
 ## Contributors
 * Sijan Rijal
+* [Vecteezy](https://www.vecteezy.com/) - Provided images for the application's main page 
 
 ## License
 See the [LICENSE](./LICENSE) for details
