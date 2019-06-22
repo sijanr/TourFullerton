@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ public class SelectedItemListAdapter extends RecyclerView.Adapter<SelectedItemLi
         private TextView itemTitle;
         private TextView itemPhone;
         private TextView itemLocation;
+        private ImageButton itemPhoneButton;
 
         //constructor to get the views that need to be used to populate with the list data
         public ItemsViewHolder(View itemView) {
@@ -39,6 +41,7 @@ public class SelectedItemListAdapter extends RecyclerView.Adapter<SelectedItemLi
             itemTitle = itemView.findViewById(R.id.text_title);
             itemPhone = itemView.findViewById(R.id.phone_text_view);
             itemLocation = itemView.findViewById(R.id.location_text_view);
+            itemPhoneButton = itemView.findViewById(R.id.phone_button);
         }
     }
 
@@ -57,7 +60,13 @@ public class SelectedItemListAdapter extends RecyclerView.Adapter<SelectedItemLi
     public void onBindViewHolder(@NonNull SelectedItemListAdapter.ItemsViewHolder itemsViewHolder, int i) {
         itemsViewHolder.itemImage.setImageResource(itemArrayList.get(i).getImageResourceID());
         itemsViewHolder.itemTitle.setText(itemArrayList.get(i).getItemTitle());
-        itemsViewHolder.itemPhone.setText(itemArrayList.get(i).getItemPhoneNumber());
+        if(itemArrayList.get(i).getItemPhoneNumber().equals("")){
+            itemsViewHolder.itemPhone.setVisibility(View.GONE);
+            itemsViewHolder.itemPhoneButton.setVisibility(View.GONE);
+        }
+        else{
+            itemsViewHolder.itemPhone.setText(itemArrayList.get(i).getItemPhoneNumber());
+        }
         itemsViewHolder.itemLocation.setText(itemArrayList.get(i).getItemAddress());
 
     }

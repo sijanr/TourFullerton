@@ -56,6 +56,14 @@ public class SelectedItemActivity extends AppCompatActivity {
                 selectedItemArrayList.add(new SelectedItem(R.drawable.california_state_fullerton, "California State University, Fullerton", "(657) 278-2011", "800 N. State College Blvd, Fullerton, CA 92831"));
                 break;
 
+            //if the user selects parks
+            case PARKS:
+                getSupportActionBar().setTitle("Parks");
+                selectedItemArrayList.clear();
+                selectedItemArrayList.add(new SelectedItem(R.drawable.craig_park, "Craig Regional Park", "(714) 973-3180", "3300 State College Blvd, Fullerton, CA 92832"));
+                selectedItemArrayList.add(new SelectedItem(R.drawable.hillcrest_park, "Hillcrest Park", "", "1155 N Lemon St, Fullerton, CA 92832"));
+                selectedItemArrayList.add(new SelectedItem(R.drawable.rolling_hills_park, "Rolling Hills Park", "", "1515 E Bastanchury Rd, Fullerton, CA 92835"));
+
 
         }
 
