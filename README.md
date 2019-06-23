@@ -9,6 +9,9 @@ Import the project in Android studio and compile and run it on your android devi
 * Android Studio
 * Android device running on at least Android 4.0.3
 
+## Screenshots
+<img src="/screenshots/screen_1.png" height="400">&nbsp;&nbsp;&nbsp;<img src="/screenshots/screen_2.png" height="400">&nbsp;&nbsp;&nbsp;<img src="/screenshots/screen_3.png" height="400">
+
 ## APIs used
 * [Glide](https://github.com/bumptech/glide) - An image loading and caching library
 
