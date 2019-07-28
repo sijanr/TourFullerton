@@ -19,10 +19,13 @@ public class SelectedItemListAdapter extends RecyclerView.Adapter<SelectedItemLi
 
     private LayoutInflater mLayoutInflater;
 
+    private int textTitleColor;
+
     //initialize the layout inflater and list data
-    public SelectedItemListAdapter(Context context, ArrayList<SelectedItem> itemArrayList) {
+    public SelectedItemListAdapter(Context context, ArrayList<SelectedItem> itemArrayList, int titleColor) {
         this.itemArrayList = itemArrayList;
         mLayoutInflater = LayoutInflater.from(context);
+        this.textTitleColor = titleColor;
     }
 
 
@@ -42,6 +45,7 @@ public class SelectedItemListAdapter extends RecyclerView.Adapter<SelectedItemLi
             itemPhone = itemView.findViewById(R.id.phone_text_view);
             itemLocation = itemView.findViewById(R.id.location_text_view);
             itemPhoneButton = itemView.findViewById(R.id.phone_button);
+            itemTitle.setTextColor(textTitleColor);
         }
     }
 
@@ -60,11 +64,10 @@ public class SelectedItemListAdapter extends RecyclerView.Adapter<SelectedItemLi
     public void onBindViewHolder(@NonNull SelectedItemListAdapter.ItemsViewHolder itemsViewHolder, int i) {
         itemsViewHolder.itemImage.setImageResource(itemArrayList.get(i).getImageResourceID());
         itemsViewHolder.itemTitle.setText(itemArrayList.get(i).getItemTitle());
-        if(itemArrayList.get(i).getItemPhoneNumber().equals("")){
+        if (itemArrayList.get(i).getItemPhoneNumber().equals("")) {
             itemsViewHolder.itemPhone.setVisibility(View.GONE);
             itemsViewHolder.itemPhoneButton.setVisibility(View.GONE);
-        }
-        else{
+        } else {
             itemsViewHolder.itemPhone.setText(itemArrayList.get(i).getItemPhoneNumber());
         }
         itemsViewHolder.itemLocation.setText(itemArrayList.get(i).getItemAddress());
